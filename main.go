@@ -4,13 +4,13 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 
-	hashicups "terraform-provider-feishu/feishu"
+	feishu "terraform-provider-feishu/feishu"
 )
 
 func main() {
 	plugin.Serve(&plugin.ServeOpts{
 		ProviderFunc: func() *schema.Provider {
-			return hashicups.Provider()
+			return feishu.Provider()
 		},
 	})
 }
